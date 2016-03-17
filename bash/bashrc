@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+######################
+# Sourcing other files
+######################
+# Get the dirname of this script
+DIR="$(dirname "${BASH_SOURCE}")";
+
+# source aliases
+source $DIR/aliases
+
+# source functions
+source $DIR/functions
+
+# git completions
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+# Fuzzy finder
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+######################
+# Path Additions
+######################
+# Add local binaries to path
+export PATH=$HOME/bin:$PATH
+
+######################
+# Settings
+######################
+# vim mode
+set -o vi
+
+# Always color grep output, even when piping
+export GREP_OPTIONS='--color=always'
+
+## Cylcle through completions ###
+# [[ $- = *i* ]] && bind TAB:menu-complete
+# [[ $- = *i* ]] && bind CONTROL-k:menu-complete
+# [[ $- = *i* ]] && bind CONTROL-j:menu-complete-backward
+
+## Ignore case with completion ##
+bind 'set completion-ignore-case on'
+## Show list after the first tab ##
+set show-all-if-ambiguous on
+
+## Minor spell checking with cd ##
+shopt -s cdspell
+
+## Case insensitice Filename matching / completions ##
+set completion-ignore-case on
+
+## Bash will append (not overwrite) history on disk ##
+shopt -s histappend
+## Write previous line to disk ##
+# PROMPT_COMMAND='history -a'
