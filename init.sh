@@ -50,5 +50,17 @@ else
 fi
 
 echo ""
+echo "UPDATING GITCONFIG"
+echo "=============="
+echo ""
+
+if [ ! \( -e $HOME/.gitconfig \) ]; then
+    ln -s $DIR/git/gitconfig $HOME/.gitconfig
+    [ $? -eq 0 ] && echo "${GREEN}Created a softlink at $HOME/.gitconfig${NC}"
+else
+    echo "${GREEN}$HOME/.gitconfig already exists. No action${NC}"
+fi
+
+echo ""
 echo "Done"
 echo ""
