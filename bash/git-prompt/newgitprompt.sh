@@ -73,6 +73,9 @@ function status() {
 }
 
 function prompt_status() {
+  PLUS="\xE2\x9C\x9A" # ✚
+  ELLIPSIS="\xE2\x80\xA6" # …
+  DOT="\xE2\x97\x8F" # ●
 
   IFS=" " read -r -a array < <(status)
   indexed=${array[0]}
@@ -81,19 +84,14 @@ function prompt_status() {
 
   prompt=""
   if [ $indexed -gt 0 ]; then
-    prompt="$prompt●$indexed"
+    prompt="$prompt$DOT $indexed"
   fi
   if [ $unindexedModified -gt 0 ]; then
-    prompt="$prompt✚$unindexedModified"
+    prompt="$prompt$PLUS $unindexedModified"
   fi
   if [ $untracked -gt 0 ]; then
-    prompt="$prompt…$untracked"
+    prompt="$prompt$ELLIPSIS $untracked"
   fi
-  echo "$prompt"
 
-  # echo "●${array[0]}"
-  # echo "unindexedModified: ${array[1]}"
-  # echo "untracked: ${array[2]}"
-
-  # ●✚…
+  echo -e "$prompt"
 }
