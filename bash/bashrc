@@ -12,7 +12,11 @@ source $DIR/aliases
 # source functions
 source $DIR/functions
 
-# git completions
+# git completion
+source $DIR/../git/git-completion.sh
+__git_complete g __git_main
+
+# git prompt
 if [ -f $DIR/git-prompt/gitprompt.sh ]; then
   source $DIR/git-prompt/gitprompt.sh
   GIT_PROMPT_ONLY_IN_REPO=1
