@@ -1,11 +1,13 @@
 [url "git@github.com:"]
-  insteadOf = https://github.com/
+	insteadOf = https://github.com/
 [alias]
-  st = status
-  ci = commit
-  br = branch
-  co = checkout
-  d = diff --color
-  dc = diff --cached
-  lg = log -p
-  who = shortlog -s --
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	d = diff --color
+	dc = diff --cached
+	lg = log -p
+	who = shortlog -s --
+	unstage = reset HEAD --
+	last = log -1 HEAD
