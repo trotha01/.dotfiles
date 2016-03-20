@@ -5,8 +5,8 @@
   ci = commit
   br = branch
   co = checkout
-  d = diff
-  df = diff
+  d = diff --color
+  df = diff --color
   dc = diff --cached
   lg = log -p
   who = shortlog -s --
