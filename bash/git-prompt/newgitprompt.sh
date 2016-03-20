@@ -1,3 +1,9 @@
+# COLORS
+RESET_COLOR='\033[0m'
+RED='\033[31m'
+GREEN='\033[32m'
+BLUE='\033[34m'
+
 function we_are_on_repo() {
   if [[ -e "$(git rev-parse --git-dir 2> /dev/null)" ]]; then
     echo 1
@@ -9,7 +15,7 @@ function branch() {
   echo $(git branch -q)
 }
 
-# Returns 3 ints: indexed modified untracked
+# Returns branch plus 3 ints: indexed modified untracked
 function status() {
 
   # unindexed changes
@@ -28,7 +34,15 @@ function status() {
   # To understand the XY status codes see:
   # https://git-scm.com/docs/git-status
 
+  BRANCH=""
+
   while IFS= read -r s; do
+    if [ -z $BRANCH ]; then
+      s=($s)
+      BRANCH="${s[1]}"
+      continue
+    fi
+
     X=${s:0:1}
     Y=${s:1:1}
 
@@ -55,7 +69,7 @@ function status() {
     [D])
       unindexedDelete=$((unindexedDelete+1)) ;;
     esac
-  done < <(git status --porcelain)
+  done < <(git status --porcelain -b)
 
   # echo "modified: $modified"
   # echo "unindexedModify: $unindexedModify"
@@ -69,29 +83,41 @@ function status() {
   # echo "indexed: $indexed"
   # echo "untracked: $untracked"
   # echo "unindexed: $unindexedModify"
-  echo "$indexed $unindexedModify $untracked"
+  echo "$BRANCH $indexed $unindexedModify $untracked"
 }
 
 function prompt_status() {
+  # To get the hex, you can use:
+  # echo -n ●|hexdump
   PLUS="\xE2\x9C\x9A" # ✚
   ELLIPSIS="\xE2\x80\xA6" # …
   DOT="\xE2\x97\x8F" # ●
+  CHECK="\xE2\x9C\x94" # ✔
 
   IFS=" " read -r -a array < <(status)
-  indexed=${array[0]}
-  unindexedModified=${array[1]}
-  untracked=${array[2]}
+  branch=${array[0]}
+  indexed=${array[1]}
+  unindexedModified=${array[2]}
+  untracked=${array[3]}
 
-  prompt=""
+  if [ $branch = "HEAD" ]; then
+    branch=`git rev-parse --verify -q --short HEAD`
+  fi
+
+
+  prompt="[$branch|"
   if [ $indexed -gt 0 ]; then
-    prompt="$prompt$DOT $indexed"
+    prompt="$prompt$RED$DOT $indexed$RESET_COLOR"
   fi
   if [ $unindexedModified -gt 0 ]; then
-    prompt="$prompt$PLUS $unindexedModified"
+    prompt="$prompt$BLUE$PLUS $unindexedModified$RESET_COLOR"
   fi
   if [ $untracked -gt 0 ]; then
     prompt="$prompt$ELLIPSIS $untracked"
   fi
+  if [ $indexed -eq 0 ] && [ $unindexedModified -eq 0 ] && [ $untracked -eq 0 ]; then
+    prompt="$prompt$GREEN$CHECK$RESET_COLOR"
+  fi
 
-  echo -e "$prompt"
+  echo -e "$prompt]"
 }
