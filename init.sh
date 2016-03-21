@@ -49,6 +49,13 @@ else
     echo "${GREEN}$HOME/.vimrc already exists. No action${NC}"
 fi
 
+if [ ! \( -e $HOME/.vim \) ]; then
+    ln -s $DIR/vim/options $HOME/.vim
+    [ $? -eq 0 ] && echo "${GREEN}Created a softlink at $HOME/.vim${NC}"
+else
+    echo "${GREEN}$HOME/.vim already exists. No action${NC}"
+fi
+
 echo ""
 echo "UPDATING GITCONFIG"
 echo "=============="
