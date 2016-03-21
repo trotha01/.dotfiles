@@ -30,11 +30,14 @@ echo ""
 
 if [ -e $HOME/.bash_profile ]; then
     append "source $DIR/bash/bashrc" $HOME/.bash_profile
+    [ $? -eq 0 ] && echo "${GREEN} appended to $HOME/.bash_profile${NC}"
 elif [ -e $HOME/.bashrc ]; then
     append "source $DIR/bash/bashrc" $HOME/.bashrc
+    [ $? -eq 0 ] && echo "${GREEN} appended to $HOME/.bashrc${NC}"
 else
     ln -s $DIR/bash/bashrc $HOME/.bash_profile
     ln -s $DIR/bash/bashrc $HOME/.bashrc
+    [ $? -eq 0 ] && echo "${GREEN} created softlinks $HOME/.bashrc and $HOME/.bash_profile${NC}"
 fi
 
 echo ""

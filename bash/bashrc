@@ -4,7 +4,8 @@
 # Sourcing other files
 ######################
 # Get the dirname of this script
-DIR="$(dirname "${BASH_SOURCE}")";
+DIR=$( stat -f %Y ${BASH_SOURCE} )
+DIR=$( dirname $DIR )
 
 # source aliases
 source $DIR/aliases
