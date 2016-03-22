@@ -17,6 +17,15 @@ function force() {
   done
 }
 
+# Repeat it until it doesn't work
+function forceUntil() {
+  i=1
+  while $@; do
+    i=`expr $i + 1`
+    echo "\n\n ===== Attempt #$i ===== \n\n"
+  done
+}
+
 # Line break
 function lb {
     repeat 10 echo
