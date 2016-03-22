@@ -53,5 +53,6 @@ alias serve='python -m SimpleHTTPServer 8080'
 # Demo
 alias keys='key-mon'
 
-# docker-compose
+# docker
 alias dc='docker-compose'
+alias dm='docker-machine'
