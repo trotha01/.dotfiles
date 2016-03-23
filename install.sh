@@ -34,6 +34,13 @@ brew tap homebrew/completions && brew install vagrant-completion # Optional
 
 echo ""
 echo "==================="
+echo "INSTALLING SILVER SEARCHER"
+echo "==================="
+echo ""
+brew install the_silver_searcher
+
+echo ""
+echo "==================="
 echo "Manual Installations needed"
 echo "==================="
 echo ""
