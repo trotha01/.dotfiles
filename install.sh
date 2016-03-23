@@ -41,5 +41,7 @@ echo "VAGRANT"
 echo "install from https://releases.hashicorp.com/vagrant/1.7.4/vagrant_1.7.4.dmg"
 echo ""
 echo "GOLANG"
-echo "install from https://golang.org/dl/
+echo "install from https://golang.org/dl/"
 echo ""
+echo "GOOGLE DRIVE"
+echo "https://tools.google.com/dlpage/drive"
