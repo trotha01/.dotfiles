@@ -23,6 +23,9 @@ if [ -f $DIR/git-prompt/gitprompt.sh ]; then
   GIT_PROMPT_ONLY_IN_REPO=1
 fi
 
+# autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 # Fuzzy finder
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 

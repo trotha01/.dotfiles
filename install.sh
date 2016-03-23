@@ -50,6 +50,13 @@ brew install fzf
 
 echo ""
 echo "==================="
+echo "INSTALLING AUTOJUMP"
+echo "==================="
+echo ""
+brew install autojump
+
+echo ""
+echo "==================="
 echo "Manual Installations needed"
 echo "==================="
 echo ""
