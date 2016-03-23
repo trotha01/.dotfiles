@@ -31,6 +31,12 @@ fi
 ######################
 # Add local binaries to path
 export PATH=$HOME/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
+
+######################
+# Environment
+######################
+export GOPATH=$HOME/go
 
 ######################
 # Settings
