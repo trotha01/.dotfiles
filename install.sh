@@ -27,9 +27,19 @@ brew cask install virtualbox
 
 echo ""
 echo "==================="
-echo "INSTALLING VAGRANT"
+echo "INSTALLING VAGRANT COMPLETIONS"
 echo "==================="
 echo ""
-brew install caskroom/cask/brew-cask
-brew cask install vagrant
 brew tap homebrew/completions && brew install vagrant-completion # Optional
+
+echo ""
+echo "==================="
+echo "Manual Installations needed"
+echo "==================="
+echo ""
+echo "VAGRANT"
+echo "install from https://releases.hashicorp.com/vagrant/1.7.4/vagrant_1.7.4.dmg"
+echo ""
+echo "GOLANG"
+echo "install from https://golang.org/dl/
+echo ""
