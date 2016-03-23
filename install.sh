@@ -41,6 +41,15 @@ brew install the_silver_searcher
 
 echo ""
 echo "==================="
+echo "INSTALLING FZF"
+echo "==================="
+echo ""
+brew install fzf
+# Install shell extensions
+/usr/local/opt/fzf/install
+
+echo ""
+echo "==================="
 echo "Manual Installations needed"
 echo "==================="
 echo ""
