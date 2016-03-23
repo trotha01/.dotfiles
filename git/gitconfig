@@ -11,3 +11,6 @@
 	who = shortlog -s --
 	unstage = reset HEAD --
 	last = log -1 HEAD
+[user]
+	name = trotha01
+	email = trevor.rothaus@sendgrid.com
