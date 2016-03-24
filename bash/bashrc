@@ -29,6 +29,9 @@ fi
 # Fuzzy finder
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# sg specific
+[ -f $HOME/Documents/sgdotfiles/bash/bashrc ] && source $HOME/Documents/sgdotfiles/bash/bashrc
+
 ######################
 # Path Additions
 ######################
