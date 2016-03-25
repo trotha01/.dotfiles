@@ -56,3 +56,6 @@ alias keys='key-mon'
 # docker
 alias dc='docker-compose'
 alias dm='docker-machine'
+
+# reload bashrc
+alias sbash='source ~/.bash_profile'
