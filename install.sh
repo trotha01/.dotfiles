@@ -97,5 +97,9 @@ echo "http://www.sequelpro.com/download"
 echo ""
 echo "VISUAL STUDIO"
 echo "https://code.visualstudio.com/Updates"
+echo ""
+echo "SCREEN HERO"
+echo "http://screenhero.com/download.html"
+
 
 
