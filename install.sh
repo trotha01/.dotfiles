@@ -64,10 +64,19 @@ brew install autojump
 
 echo ""
 echo "==================="
+echo "INSTALLING PIP"
+echo "==================="
+echo ""
+curl -s https://bootstrap.pypa.io/get-pip.py > get-pip.py
+sudo python get-pip.py
+rm -rf get-pip.py
+
+echo ""
+echo "==================="
 echo "INSTALLING VIRTUALENV"
 echo "==================="
 echo ""
-brew install pyenv-virtualenv
+sudo pip install virtualenv
 
 echo ""
 echo "==================="
