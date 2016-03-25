@@ -9,6 +9,13 @@ echo ""
 
 echo ""
 echo "==================="
+echo "UPDATING HOMEBREW"
+echo "==================="
+echo ""
+brew update
+
+echo ""
+echo "==================="
 echo "INSTALLING CHEFDK"
 echo "==================="
 echo ""
@@ -54,6 +61,13 @@ echo "INSTALLING AUTOJUMP"
 echo "==================="
 echo ""
 brew install autojump
+
+echo ""
+echo "==================="
+echo "INSTALLING VIRTUALENV"
+echo "==================="
+echo ""
+brew install pyenv-virtualenv
 
 echo ""
 echo "==================="
