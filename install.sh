@@ -68,3 +68,7 @@ echo "install from https://golang.org/dl/"
 echo ""
 echo "GOOGLE DRIVE"
 echo "https://tools.google.com/dlpage/drive"
+echo ""
+echo "SEQUEL PRO"
+echo "http://www.sequelpro.com/download"
+
