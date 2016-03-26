@@ -100,6 +100,10 @@ echo "https://code.visualstudio.com/Updates"
 echo ""
 echo "SCREEN HERO"
 echo "http://screenhero.com/download.html"
+echo ""
+echo "ELM"
+echo "http://elm-lang.org/install"
+echo ""
 
 
 
