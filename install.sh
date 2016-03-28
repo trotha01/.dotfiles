@@ -80,6 +80,22 @@ sudo pip install virtualenv
 
 echo ""
 echo "==================="
+echo "INSTALLING NODEJS"
+echo "==================="
+echo ""
+brew install nodejs
+
+echo ""
+echo "==================="
+echo "INSTALLING HASKELL"
+echo "==================="
+echo ""
+brew install ghc
+
+
+
+echo ""
+echo "==================="
 echo "Manual Installations needed"
 echo "==================="
 echo ""
