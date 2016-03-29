@@ -92,6 +92,13 @@ echo "==================="
 echo ""
 brew install ghc
 
+echo ""
+echo "==================="
+echo "INSTALLING HUB"
+echo "==================="
+echo ""
+brew install hub
+
 
 
 echo ""
