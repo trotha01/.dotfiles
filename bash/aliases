@@ -21,6 +21,9 @@ alias cp='cp -r'
 # Navigation
 alias ll='ls -lh'
 
+# Need iterm and title function for this one
+alias t='title'
+
 # Redis
 alias redis-server='redis-server /usr/local/etc/redis.conf'
 
