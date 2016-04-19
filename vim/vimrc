@@ -114,6 +114,9 @@ let g:syntastic_always_populate_loc_list = 1
 " helptags
 :helptags ~/.vim/doc
 
+" elm specific
+let g:elm_format_autosave = 1
+
 " END BUNDLES
 """""""""""""""""""""""""""""""""""""""""""""""""""}}}
 
