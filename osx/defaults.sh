@@ -23,6 +23,7 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 defaults write com.apple.dock static-only -bool TRUE
 defaults write com.apple.dock tilesize -integer 30
+defaults write com.apple.Dock workspaces-auto-swoosh -bool NO
 killall Dock
 
 # Reset all the settings above
