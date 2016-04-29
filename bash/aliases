@@ -59,7 +59,7 @@ alias keys='key-mon'
 # docker
 alias dc='docker-compose'
 alias dm='docker-machine'
-alias dclean='docker rm --force --volumes $(docker ps -a -q)'
+alias dclean='docker rm --force --volumes $(docker ps -a -q); docker rmi $(docker images | grep "<none>" | awk "{print $3}")'
 
 # reload bashrc
 alias sbash='source ~/.bash_profile'
