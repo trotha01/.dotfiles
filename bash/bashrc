@@ -76,3 +76,9 @@ set completion-ignore-case on
 shopt -s histappend
 ## Write previous line to disk ##
 # PROMPT_COMMAND='history -a'
+
+PATH="/Users/trevorrothaus/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/trevorrothaus/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/trevorrothaus/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/trevorrothaus/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/trevorrothaus/perl5"; export PERL_MM_OPT;
