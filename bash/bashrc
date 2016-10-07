@@ -43,6 +43,7 @@ export PATH=$HOME/go/bin:$PATH
 # Environment
 ######################
 export GOPATH=$HOME/go
+export EDITOR=vim
 
 ######################
 # Settings
