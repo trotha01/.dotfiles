@@ -147,13 +147,8 @@ endif
 
 " Solarized
 syntax enable "Enable syntax hl
-set background=dark " Vim will try to use colors for a dark background
-let g:solarized_termcolors=256
-colorscheme solarized
-call togglebg#map("<F5>") " F5 will toggle the solarized colorscheme
-
-" Nicer vimdiff
-let g:solarized_diffmode="high"
+" set background=dark " Vim will try to use colors for a dark background
+set background=light " Vim will try to use colors for a light background
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
@@ -451,7 +446,3 @@ endif
 
 " END FUNCTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""}}}
-
-" TODO: figure out actual solarize fix
-ToggleBG
-
