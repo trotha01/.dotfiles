@@ -43,8 +43,10 @@ function spdread {
 }
 
 # For changing terminal profile (iterm)
-function profile {
-    echo -e "\033]50;SetProfile=$1\a"
+function profile() {
+  profile=$1
+  echo -e "\033]50;SetProfile=$profile\a"
+  export TERMINAL_PROFILE=$profile
 }
 
 # For changing terminal title (iterm)
@@ -139,4 +141,10 @@ function denv() {
 
 function dcr() {
   docker-compose stop $@ && docker-compose rm -fv $@ && docker-compose up -d $@
+}
+
+function dclean() {
+  docker rm -v $(docker ps -a -q -f status=exited)
+  docker rmi $(docker images -f "dangling=true" -q)
+  docker ps -aq|xargs docker rm -fv
 }
