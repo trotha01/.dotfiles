@@ -446,3 +446,5 @@ endif
 
 " END FUNCTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""}}}
+
+colorscheme default
