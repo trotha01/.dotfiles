@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# This file contains commands for both bashrc and zsh
+
+# source aliases
+source $HOME/.dotfiles/bash/aliases
+
+# source functions
+source $HOME/.dotfiles/bash/functions
+
+# autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+# sg specific
+[ -f $HOME/Documents/sgdotfiles/bash/bashrc ] && source $HOME/Documents/sgdotfiles/bash/bashrc
+
+######################
+# Path Additions
+######################
+# Add local binaries to path
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
+export PATH=$HOME/.cabal/bin:$PATH
+
+######################
+# Environment
+######################
+export GOPATH=$HOME/go
+export EDITOR=vim
+
+######################
+# Settings
+######################
+# vim mode
+set -o vi
+
+PATH="/Users/trevorrothaus/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/trevorrothaus/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/trevorrothaus/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/trevorrothaus/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/trevorrothaus/perl5"; export PERL_MM_OPT;
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# added by travis gem
+[ -f /Users/trevorrothaus/.travis/travis.sh ] && source /Users/trevorrothaus/.travis/travis.sh

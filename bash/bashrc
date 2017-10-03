@@ -3,57 +3,24 @@
 ######################
 # Sourcing other files
 ######################
-# Get the dirname of this script
-DIR=$( stat -f %Y ${BASH_SOURCE} )
-DIR=$( dirname $DIR )
-
 source ~/.profile
 
-# source aliases
-source $DIR/aliases
+source $HOME/.dotfiles/bash/bzshrc
 
-# source functions
-source $DIR/functions
 
 # git completion
-source $DIR/../git/git-completion.sh
-__git_complete g __git_main
+# source $HOME/.dotfiles/git/git-completion.sh
+# __git_complete g __git_main
 
 # git prompt
-if [ -f $DIR/git-prompt/gitprompt.sh ]; then
-  source $DIR/git-prompt/gitprompt.sh
-  GIT_PROMPT_ONLY_IN_REPO=1
-  GIT_PROMPT_THEME=Solarized_Ubuntu
-fi
-
-# autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+# if [ -f $DIR/git-prompt/gitprompt.sh ]; then
+#   source $DIR/git-prompt/gitprompt.sh
+#   GIT_PROMPT_ONLY_IN_REPO=1
+#   GIT_PROMPT_THEME=Solarized_Ubuntu
+# fi
 
 # Fuzzy finder
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# sg specific
-[ -f $HOME/Documents/sgdotfiles/bash/bashrc ] && source $HOME/Documents/sgdotfiles/bash/bashrc
-
-######################
-# Path Additions
-######################
-# Add local binaries to path
-export PATH=$HOME/bin:$PATH
-export PATH=$HOME/go/bin:$PATH
-export PATH=$HOME/.cabal/bin:$PATH
-
-######################
-# Environment
-######################
-export GOPATH=$HOME/go
-export EDITOR=vim
-
-######################
-# Settings
-######################
-# vim mode
-set -o vi
 
 # autocompletion for sudo
 complete -cf sudo
@@ -82,15 +49,6 @@ shopt -s histappend
 ## Write previous line to disk ##
 # PROMPT_COMMAND='history -a'
 
-PATH="/Users/trevorrothaus/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/trevorrothaus/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/trevorrothaus/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/trevorrothaus/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/trevorrothaus/perl5"; export PERL_MM_OPT;
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# added by travis gem
-[ -f /Users/trevorrothaus/.travis/travis.sh ] && source /Users/trevorrothaus/.travis/travis.sh
+# start z shell
+# zsh
