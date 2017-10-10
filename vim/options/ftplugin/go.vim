@@ -1,5 +1,5 @@
 let g:go_fmt_command = "goimports"
-let g:syntastic_go_checkers = ['govet', 'gofmt', 'go']
+let g:syntastic_go_checkers = ['govet', 'gofmt', 'golint']
 
 let mapleader = "g"
 
