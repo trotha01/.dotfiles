@@ -76,5 +76,8 @@ if [ -r $DIR/git/git-prompt.sh ]; then
                             # <> means diverged, = indicates no difference
 fi
 
-PS1='[\W$(__git_ps1 " (%s)")]\$ '
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# PS1='[\W$(__git_ps1 " (%s)")]\$ '
 PROMPT_COMMAND='__git_ps1 "\w" "\\\$ "'
