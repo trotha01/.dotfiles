@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-export SOURCED="$SOURCED:.bashrc"
-
 # to debug, simply run bash -x
+
+export SOURCED="$SOURCED:.bashrc"
 
 ######################
 # Sourcing other files

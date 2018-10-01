@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # This file contains commands for both bashrc and zsh
+export SOURCED="$SOURCED:.bzshrc"
 
 # source aliases
 source $HOME/.dotfiles/bash/aliases
