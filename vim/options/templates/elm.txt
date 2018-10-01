@@ -1,13 +1,18 @@
 module Main exposing (..)
 
+import Browser exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 
 
 main =
-    Html.program
-        { init = init, update = update, view = view, subscriptions = subscriptions }
+    Browser.document
+        { init = init
+        , update = update
+        , view = view
+        , subscriptions = subscriptions
+        }
 
 
 
@@ -18,8 +23,12 @@ type alias Model =
     {}
 
 
-init : ( Model, Cmd Msg )
-init =
+type alias Flags =
+    {}
+
+
+init : Flags -> ( Model, Cmd Msg )
+init flags =
     ( {}, Cmd.none )
 
 
@@ -40,9 +49,16 @@ update msg model =
 -- VIEW
 
 
-view : Model -> Html Msg
+view : Model -> Document Msg
 view model =
-    text "Hello World"
+    { title = title
+    , body = [ text "Hello World" ]
+    }
+
+
+title : String
+title =
+    "Hello World"
 
 
 
@@ -52,4 +68,3 @@ view model =
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.none
-

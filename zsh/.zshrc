@@ -1,3 +1,6 @@
+# uncomment this line and the last line for profiling zsch startup
+# zmodload zsh/zprof
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -18,7 +21,7 @@ ZSH_THEME="garyblessington"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -89,3 +92,39 @@ source $ZSH/oh-my-zsh.sh
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source $HOME/.dotfiles/bash/bzshrc
+
+# Don't share history between terminal windows
+unsetopt share_history
+
+# Reverse search with ctrl-r
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)";
+fi
+
+# Exercism
+if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
+  . ~/.config/exercism/exercism_completion.zsh
+fi
+
+# The next line updates PATH for the Google Cloud SDK.
+# if [ -f '/Users/trevorrothaus/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/trevorrothaus/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+# if [ -f '/Users/trevorrothaus/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/trevorrothaus/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# goenv stuff
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export GOROOT="$(goenv prefix)"
+
+# haskell stack
+export PATH="$HOME/.local/bin:$PATH"
+
+# zprof

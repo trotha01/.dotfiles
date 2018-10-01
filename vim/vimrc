@@ -176,6 +176,11 @@ augroup templates
   " autocmd BufNewFile *.cpp silent! !cat $HOME/.vim/templates/make.cpp.txt >> Makefile
 augroup END
 
+" osx crontab editing
+augroup crontab
+    autocmd filetype crontab setlocal nobackup nowritebackup
+augroup End
+
 " markdown Formatting
 augroup markdown
     autocmd FileType markdown set textwidth=80 formatoptions+=twan
