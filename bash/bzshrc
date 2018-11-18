@@ -41,9 +41,5 @@ PERL_LOCAL_LIB_ROOT="/Users/trevorrothaus/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LO
 PERL_MB_OPT="--install_base \"/Users/trevorrothaus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/trevorrothaus/perl5"; export PERL_MM_OPT;
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # added by travis gem
 [ -f /Users/trevorrothaus/.travis/travis.sh ] && source /Users/trevorrothaus/.travis/travis.sh

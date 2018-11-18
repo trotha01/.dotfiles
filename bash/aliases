@@ -51,7 +51,7 @@ alias gitconf='vim ~/.gitconfig'
 alias gitconfig='vim ~/.gitconfig'
 
 # Web
-alias serve='python -m SimpleHTTPServer 8080'
+alias serve='python -m SimpleHTTPServer 8000'
 
 # Demo
 alias keys='key-mon'
