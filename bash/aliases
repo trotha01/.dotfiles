@@ -44,7 +44,7 @@ alias sd='sudo shutdown -h now' # Shutdown
 alias po='sudo shutdown -h now' # Poweroff (same as shutdown)
 
 # Searching
-alias grep='grep --color=always'
+# alias grep='grep --color=always'
 
 # git
 alias gitconf='vim ~/.gitconfig'

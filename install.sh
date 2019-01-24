@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# TODO: check if something is installed first
+
 # http://brew.sh/
 echo "==================="
 echo "INSTALLING HOMEBREW"
@@ -16,35 +18,10 @@ brew update
 
 echo ""
 echo "==================="
-echo "INSTALLING CHEFDK"
+echo "INSTALLING Ripgrep
 echo "==================="
 echo ""
-brew install caskroom/cask/brew-cask
-brew cask install chefdk
-eval "$(chef shell-init bash)"
-
-
-echo ""
-echo "==================="
-echo "INSTALLING VIRTUALBOX"
-echo "==================="
-echo ""
-brew install caskroom/cask/brew-cask
-brew cask install virtualbox
-
-echo ""
-echo "==================="
-echo "INSTALLING VAGRANT COMPLETIONS"
-echo "==================="
-echo ""
-brew tap homebrew/completions && brew install vagrant-completion # Optional
-
-echo ""
-echo "==================="
-echo "INSTALLING SILVER SEARCHER"
-echo "==================="
-echo ""
-brew install the_silver_searcher
+brew install ripgrep
 
 echo ""
 echo "==================="
@@ -85,12 +62,12 @@ echo "==================="
 echo ""
 brew install nodejs
 
-echo ""
-echo "==================="
-echo "INSTALLING HASKELL"
-echo "==================="
-echo ""
-brew install ghc
+# echo ""
+# echo "==================="
+# echo "INSTALLING HASKELL"
+# echo "==================="
+# echo ""
+# brew install ghc
 
 echo ""
 echo "==================="
@@ -99,6 +76,33 @@ echo "==================="
 echo ""
 brew install hub
 
+echo ""
+echo "==================="
+echo "INSTALLING TREE"
+echo "==================="
+echo ""
+brew install tree
+
+echo ""
+echo "==================="
+echo "INSTALLING JQ"
+echo "==================="
+echo ""
+brew install jq
+
+echo ""
+echo "==================="
+echo "INSTALLING NGROK"
+echo "==================="
+echo ""
+brew cask install ngrok
+
+echo ""
+echo "==================="
+echo "INSTALLING YARN"
+echo "==================="
+echo ""
+brew install yarn
 
 
 echo ""
@@ -121,12 +125,27 @@ echo ""
 echo "VISUAL STUDIO"
 echo "https://code.visualstudio.com/Updates"
 echo ""
-echo "SCREEN HERO"
-echo "http://screenhero.com/download.html"
-echo ""
 echo "ELM"
 echo "http://elm-lang.org/install"
 echo ""
-
-
-
+echo "Spectacle"
+echo "https://www.spectacleapp.com/"
+echo ""
+echo "Docker"
+echo "https://hub.docker.com/editions/community/docker-ce-desktop-mac"
+echo ""
+echo "NVM"
+echo "https://github.com/creationix/nvm#installation"
+echo ""
+echo "AERIAL SCREENSAVER"
+echo "https://github.com/JohnCoates/Aerial"
+echo ""
+echo "ZOOM
+echo "https://zoom.us/support/download?os=mac"
+echo ""
+echo "MENU METERS"
+echo "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/"
+echo ""
+echo "TunnelBlick"
+echo "https://tunnelblick.net/downloads.html"
+echo ""

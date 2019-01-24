@@ -43,3 +43,6 @@ function osx_reset() {
     launchctl load -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 }
 
+# TODO:
+# Add hotcorner
+# Change capslock to ctrl

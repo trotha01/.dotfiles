@@ -6,7 +6,8 @@ export SOURCED="$SOURCED:.bashrc"
 ######################
 # Sourcing other files
 ######################
-source ~/.profile
+# source ~/.profile
+[ -f ~/.secrets ] && source ~/.secrets
 
 source $HOME/.dotfiles/bash/bzshrc
 
@@ -19,7 +20,7 @@ DIR=$HOME/.dotfiles
 # complete -cf sudo
 
 # Always color grep output, even when piping
-export GREP_OPTIONS='--color=always'
+# export GREP_OPTIONS='--color=always'
 
 ## Cylcle through completions ###
 # [[ $- = *i* ]] && bind TAB:menu-complete
@@ -54,10 +55,10 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # goenv stuff
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
-export GOROOT="$(goenv prefix)"
+# export GOENV_ROOT="$HOME/.goenv"
+# export PATH="$GOENV_ROOT/bin:$PATH"
+# eval "$(goenv init -)"
+# export GOROOT="$(goenv prefix)"
 
 # haskell stack
 export PATH="$PATH:$HOME/.local/bin"
@@ -86,5 +87,14 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 # PS1='[\W$(__git_ps1 " (%s)")]\$ '
 PROMPT_COMMAND='__git_ps1 "\w" "\\\$ "'
 
-TILLER_NAMESPACE=ei-data
-eval "$(chef shell-init bash)"
+# TILLER_NAMESPACE=ei-data
+# eval "$(chef shell-init bash)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# mcfly ctrl-r
+if [ -f $(brew --prefix)/opt/mcfly/mcfly.bash ]; then
+  . $(brew --prefix)/opt/mcfly/mcfly.bash
+fi
