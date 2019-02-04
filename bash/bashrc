@@ -65,6 +65,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # custom stuff
 export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:/usr/local/bin"
 
 # git completion
