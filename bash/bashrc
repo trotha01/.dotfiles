@@ -99,3 +99,12 @@ export NVM_DIR="$HOME/.nvm"
 if [ -f $(brew --prefix)/opt/mcfly/mcfly.bash ]; then
   . $(brew --prefix)/opt/mcfly/mcfly.bash
 fi
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
+# bucklescript
+export BS_CMT_POST_PROCESS_CMD=$HOME/Documents/src/reasonml/reasonmtl-dojo-1/node_modules/.bin
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH

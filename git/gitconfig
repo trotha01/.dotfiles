@@ -13,6 +13,8 @@
 	last = log -1 HEAD
 [user]
 	name = trotha01
-	email = trevor.rothaus@sendgrid.com
+	email = trevor.rothaus@keatext.com
 [core]
 	editor = /usr/bin/vim
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
