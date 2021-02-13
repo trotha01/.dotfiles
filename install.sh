@@ -25,6 +25,13 @@ brew install ripgrep
 
 echo ""
 echo "==================="
+echo "INSTALLING Ripgrep
+echo "==================="
+echo ""
+brew install fswatch
+
+echo ""
+echo "==================="
 echo "INSTALLING FZF"
 echo "==================="
 echo ""
